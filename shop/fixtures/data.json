@@ -1,0 +1,47 @@
+[
+  {
+    "model": "shop.category",
+    "pk": 1,
+    "fields": {
+      "name": "Напитки",
+      "slug": "napitki",
+      "image": ""
+    }
+  },
+  {
+    "model": "shop.subcategory",
+    "pk": 1,
+    "fields": {
+      "name": "Кофе",
+      "slug": "coffee",
+      "image": "",
+      "category": 1
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 1,
+    "fields": {
+      "name": "Американо",
+      "slug": "americano",
+      "price": "120.00",
+      "subcategory": 1,
+      "image_small": "",
+      "image_medium": "",
+      "image_large": ""
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 2,
+    "fields": {
+      "name": "Капучино",
+      "slug": "cappuccino",
+      "price": "150.00",
+      "subcategory": 1,
+      "image_small": "",
+      "image_medium": "",
+      "image_large": ""
+    }
+  }
+]
