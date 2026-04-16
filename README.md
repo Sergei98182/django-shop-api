@@ -68,15 +68,25 @@ python manage.py drf_create_token <username>
 Использовать в заголовке:
 
 Authorization: Token <your_token>
+
 📬 Основные эндпоинты
+
 Метод	URL	Описание
+
 GET	/api/categories/	список категорий
+
 GET	/api/products/	список продуктов
+
 POST	/api/cart/add/	добавить в корзину
+
 GET	/api/cart/	просмотр корзины
+
 POST	/api/cart/remove/	удалить товар
+
 POST	/api/cart/clear/	очистить корзину
+
 POST	/api/token/	получить токен
+
 🛠 Технологии
 Python 3.10
 Django
