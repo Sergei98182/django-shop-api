@@ -2,6 +2,10 @@ Django Product Store API
 
 Тестовое задание: backend API для магазина продуктов на Django Rest Framework.
 
+Задача из пункта 1
+
+Testin_proj\utils\sequence.py
+
 🚀 Функционал
 
 📂 Категории и подкатегории
@@ -92,6 +96,7 @@ Python 3.10
 Django
 Django REST Framework
 drf-spectacular (Swagger)
+
 👨‍💻 Автор
 
 Test backend project

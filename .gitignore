@@ -14,9 +14,6 @@ db.sqlite3
 media/
 staticfiles/
 
-# migrations (ОСТОРОЖНО: обычно НЕ игнорят, но иногда в тестовых можно)
-# migrations/*.py
-# !migrations/__init__.py
 
 # === IDE ===
 .vscode/

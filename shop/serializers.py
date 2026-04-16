@@ -16,19 +16,34 @@ class CategorySerializer(serializers.ModelSerializer):
 
     
 class ProductSerializer(serializers.ModelSerializer):
-    category = serializers.CharField(source='subcategory.category.name', read_only=True)
-    subcategory = serializers.CharField(source='subcategory.name', read_only=True)
 
-    class Meta:
-        model = Product
-        fields = [
-            'id',
-            'name',
-            'slug',
-            'category',
-            'subcategory',
-            'price',
-            'image_small',
-            'image_medium',
-            'image_large',
-        ]
+    category = serializers.SerializerMethodField()
+    subcategory = serializers.SerializerMethodField()
+
+    def get_category(self, obj):
+        return {
+        "id": obj.subcategory.category.id,
+        "name": obj.subcategory.category.name,
+        "slug": obj.subcategory.category.slug,
+        }
+
+    def get_subcategory(self, obj):
+        return {
+        "id": obj.subcategory.id,
+        "name": obj.subcategory.name,
+        "slug": obj.subcategory.slug,
+        }
+
+class Meta:
+    model = Product
+    fields = [
+        'id',
+        'name',
+        'slug',
+        'category',
+        'subcategory',
+        'price',
+        'image_small',
+        'image_medium',
+        'image_large',
+    ]
